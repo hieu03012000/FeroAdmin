@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Login Page";
+
+}
+@model FeroAdmin.Models.LoginModel
+<div>
+    <form action="Login" method="post">
+        <label>Username: </label> <br />
+        @Html.TextBoxFor(m => m.Username) <br />
+        <label>Password: </label> <br />
+        @Html.PasswordFor(m => m.Password) <br />
+        <br />
+        <input type="submit" name="action" value="Login" />
+    </form>
+    @ViewBag.error
+</div>
